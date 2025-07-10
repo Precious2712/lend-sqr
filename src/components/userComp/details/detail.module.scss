@@ -1,0 +1,338 @@
+.userDetailsContainer {
+  padding: 1rem;
+
+  .backButton {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: 1.25rem;
+    cursor: pointer;
+
+    p {
+      font-size: 0.75rem;
+      color: #545F7D;
+    }
+
+    svg {
+      width: 0.75rem;
+      height: 0.75rem;
+      color: #545F7D;
+    }
+  }
+
+  .headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+
+    .title {
+      color: #213F7D;
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      @media (max-width: 640px) {
+        font-size: 0.875rem; 
+      }
+    }
+
+    .actionButtons {
+      display: flex;
+      gap: 0.75rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: transparent;
+      }
+
+      .blacklistButton {
+        border: 1px solid #E4033B;
+        color: #E4033B;
+
+        &:hover {
+          background-color: #E4033B;
+          color: white;
+        }
+      }
+
+      .activateButton {
+        border: 1px solid #39CDCC;
+        color: #39CDCC;
+
+        &:hover {
+          background-color: #39CDCC;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .userProfileCard {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    .profileSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #E5E5E5;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        gap: 3rem;
+      }
+
+      .userInfo {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+
+        .avatar {
+          width: 5rem;
+          height: 5rem;
+          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(33, 63, 125, 0.1);
+          border-radius: 50%;
+
+          svg {
+            color: #213F7D;
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+        .nameInfo {
+          .name {
+            font-size: 1.375rem;
+            font-weight: 500;
+            color: #213F7D;
+            margin-bottom: 0.5rem;
+          }
+
+          .accountNumber {
+            font-size: 0.875rem;
+            color: #545F7D;
+          }
+        }
+      }
+
+      .divider {
+        display: none;
+        height: 5rem;
+        width: 1px;
+        background-color: #E5E5E5;
+
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+
+      .tierSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+
+        .tierLabel {
+          font-size: 0.875rem;
+          color: #545F7D;
+        }
+
+        .stars {
+          display: flex;
+          gap: 0.25rem;
+
+          svg {
+            width: 1rem;
+            height: 1rem;
+
+            &.filledStar {
+              color: #E9B200;
+            }
+
+            &.emptyStar {
+              color: #E5E5E5;
+            }
+          }
+        }
+      }
+
+      .balanceSection {
+        .amount {
+          font-size: 1.375rem;
+          font-weight: 500;
+          color: #213F7D;
+          margin-bottom: 0.75rem;
+        }
+
+        .bankInfo {
+          font-size: 0.75rem;
+          color: #213F7D;
+        }
+      }
+    }
+
+    .tabsSection {
+      overflow-x: auto;
+      padding-top: 1.5rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+
+      .tabsContainer {
+        display: flex;
+        gap: 2rem;
+        min-width: max-content;
+
+        button {
+          padding-bottom: 0.75rem;
+          font-size: 1rem;
+          font-weight: 500;
+          background: none;
+          border: none;
+          cursor: pointer;
+          white-space: nowrap;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #39CDCC;
+            transition: width 0.3s ease;
+          }
+
+          &:hover:after {
+            width: 100%;
+          }
+        }
+
+        .activeTab {
+          color: #39CDCC;
+
+          &:after {
+            width: 100%;
+          }
+        }
+
+        .inactiveTab {
+          color: #545F7D;
+        }
+      }
+    }
+  }
+
+  .detailsCard {
+    padding: 2rem;
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    .section {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .sectionTitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #213F7D;
+        margin-bottom: 1.875rem;
+      }
+
+      .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.875rem;
+
+        @media (min-width: 640px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        .gridItem {
+          .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #545F7D;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+          }
+
+          .value {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #545F7D;
+          }
+        }
+      }
+
+      .gridContainerTwo {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.875rem;
+
+        @media (min-width: 640px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .gridItem {
+          .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #545F7D;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+          }
+
+          .value {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #545F7D;
+          }
+        }
+      }
+
+      &.personalInfoSection {
+        .gridContainer {
+          @media (min-width: 1024px) {
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
+      }
+    }
+  }
+}

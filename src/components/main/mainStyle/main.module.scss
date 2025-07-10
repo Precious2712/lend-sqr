@@ -1,0 +1,140 @@
+// styles.module.css
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(251, 251, 251);
+}
+
+.lastPart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comps {
+  display: flex;
+  gap: 6px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.svg {
+  height: 4vh;
+  width: 5px;
+  background-color: wheat;
+  border-radius: 4px;
+}
+
+.gridContainer {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tableWrapper {
+  width: 95%;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 1024px) {
+    width: 600px;
+  }
+}
+
+.gridCol {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.circleIconOne {
+  background-color: purple;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleIconTwo {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleIconThree {
+  background-color: green;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleIconFour {
+  background-color: orangered;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pTag {
+  font-size: 13px;
+  font-weight: 600;
+  color: gray;
+}
+
+.hTag {
+  font-size: 16px;
+  font-weight: 600;
+  color: blue;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media(max-width: 640px) {
+  .lastPart {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+}

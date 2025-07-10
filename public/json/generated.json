@@ -1,0 +1,34 @@
+[
+  {
+    "personalInformation": {
+      "fullName": "Grace Effiom",
+      "phoneNumber": "08165478645",
+      "emailAddress": "grace@gmail.com",
+      "bvn": "07060780922",
+      "gender": "Female",
+      "maritalStatus": "Single",
+      "children": "none",
+      "typeOfApartment": "Parent's Apartment"
+    },
+    "educationAndEmployement": {
+      "levelOfEducation": "B.Sc",
+      "employementStatus": "Employed",
+      "sectorOfEmployement": "FinTech",
+      "duration": "2 years",
+      "officeEmail": "grace@lendsqr.com",
+      "monthlyIncome": "#200,000.00-#400,000.00",
+      "loanRepayment": "#40,000.00"
+    },
+    "socials": {
+      "twitter": "@grace_effiom",
+      "facebook": "Grace Effiom",
+      "instagram": "@grace_effiom"
+    },
+    "guarantor": {
+      "fullName": "Debby Ogana",
+      "phoneNumber": "08133162379",
+      "emailAddress": "debby@gmail.com",
+      "relationship": "Sister"
+    }
+  }
+]

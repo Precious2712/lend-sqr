@@ -1,0 +1,192 @@
+.container {
+  min-height: 100vh;
+  background-color: rgb(251, 251, 251);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 50;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 1px;
+}
+
+.desktopSearch {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 360px;
+  }
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+}
+
+.searchInput {
+  padding-right: 2.5rem;
+  border-color: #d1d5db;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 60px;
+  background-color: #14b8a6;
+}
+
+.searchButton:hover {
+  background-color: #0d9488;
+}
+
+.searchIcon {
+  width: 2rem;
+  height: 1rem;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1.5rem;
+}
+
+.docsButton {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.bellIcon {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+
+  }
+}
+
+// .bellIcon {
+//   width: 1.25rem;
+//   height: 1.25rem;
+// }
+
+.docs {
+  margin-left: 5px;
+}
+
+.profileGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profileAvatar {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: #f97316;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: white;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    display: block;
+  }
+}
+
+.profileName {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  span {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+.dropdownIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.mobileMenuIcon {
+  margin-top: 0.75rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.mobileMenuOpen {
+  display: block;
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 30;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  top: 80px;
+  width: 100%;
+}
+
+.mobileMenuClosed {
+  display: none;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.mobileGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-left: 6px;
+
+
+}
+
+.main {
+  padding-top: 5rem;
+}
+
+@media(max-width: 640px) {
+  .sideNav {
+    display: none;
+  }
+}
