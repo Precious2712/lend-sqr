@@ -69,9 +69,9 @@
 }
 
 .circleIconOne {
-  background-color: purple;
-  width: 30px;
-  height: 30px;
+  background-color: rgb(252, 232, 255);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -79,9 +79,9 @@
 }
 
 .circleIconTwo {
-  background-color: red;
-  width: 30px;
-  height: 30px;
+  background-color: rgb(252, 232, 255);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -89,9 +89,9 @@
 }
 
 .circleIconThree {
-  background-color: green;
-  width: 30px;
-  height: 30px;
+  background-color: rgb(252, 232, 255);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -99,9 +99,9 @@
 }
 
 .circleIconFour {
-  background-color: orangered;
-  width: 30px;
-  height: 30px;
+  background-color: rgb(252, 232, 255);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -121,9 +121,6 @@
 }
 
 
-
-
-
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
@@ -134,7 +131,7 @@
 @media(max-width: 640px) {
   .lastPart {
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 30px;
     justify-content: center;
   }
 }

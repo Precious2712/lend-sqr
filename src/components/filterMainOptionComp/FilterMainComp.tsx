@@ -1,6 +1,6 @@
 'use client';
 
-import { AlignCenter, CalendarDays, CardSim, CircleDollarSign, Coins, EllipsisVertical, Eye, User, UserCheck, UserX } from "lucide-react";
+import { AlignCenter, CalendarDays, EllipsisVertical, Eye, UserCheck, UserX } from "lucide-react";
 import styles from "./filters/filter.module.scss";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { userInfo } from "@/data/applicant/data";
+import { UserFour, UserOne, UserThree, UserTwo } from "../svgComp/AllSvgComp";
 
 export function FilterMainComp() {
 
@@ -73,31 +74,31 @@ export function FilterMainComp() {
 
         <div className={styles.card}>
           <div className={styles.iconWrapper}>
-            <User className={styles.icon} />
+            <UserOne />
           </div>
           <p className={styles.title}>USERS</p>
           <h2 className={styles.count}>2,453</h2>
         </div>
 
         <div className={styles.card}>
-          <div className={styles.iconWrapper}>
-            <CircleDollarSign className={styles.icon} />
+          <div className={styles.iconWrapperOne}>
+            <UserTwo />
           </div>
           <p className={styles.title}>ACTIVE USERS</p>
           <h2 className={styles.count}>2,453</h2>
         </div>
 
         <div className={styles.card}>
-          <div className={styles.iconWrapper}>
-            <CardSim className={styles.icon} />
+          <div className={styles.iconWrapperTwo}>
+            <UserThree />
           </div>
           <p className={styles.title}>USERS WITH LOANS</p>
           <h2 className={styles.count}>12,453</h2>
         </div>
 
         <div className={styles.card}>
-          <div className={styles.iconWrapper}>
-            <Coins className={styles.icon} />
+          <div className={styles.iconWrapperThree}>
+            <UserFour />
           </div>
           <p className={styles.title}>USERS WITH SAVINGS</p>
           <h2 className={styles.count}>102,453</h2>

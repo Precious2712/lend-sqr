@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/components/useContext/Context";
 import { Toaster } from "react-hot-toast";
@@ -32,7 +32,6 @@ function ClientLayout({ children }: { children: React.ReactNode }) {
           }}
         />
       </AppProvider>
-
     </>
   );
 }
@@ -44,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.className} ${geistMono.variable} antialiased`}>
         <ClientLayout>
           {children}
         </ClientLayout>

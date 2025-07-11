@@ -15,7 +15,7 @@
   &__section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.3rem;
     margin-left: 0.75rem;
   }
 
@@ -39,5 +39,6 @@
     font-weight: bold;
     font-size: 12px;
     text-transform: uppercase;
+    color: rgb(167, 173, 189);
   }
 }

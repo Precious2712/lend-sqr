@@ -1,10 +1,11 @@
 'use client';
 
-import { AlignCenter, CardSim, ChevronLeft, ChevronRight, CircleDollarSign, Coins, EllipsisVertical, Eye, Filter, User, UserCheck, UserX } from "lucide-react";
+import { AlignCenter, ChevronLeft, ChevronRight, EllipsisVertical, Eye, UserCheck, UserX } from "lucide-react";
 import { Button } from "../ui/button";
 import { data } from "@/data/user/users";
 import styles from "./mainStyle/main.module.scss";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { UserFour, UserOne, UserThree, UserTwo } from "../svgComp/AllSvgComp";
 export function MainComp() {
 
   const getStatusColor = (status: string) => {
@@ -30,7 +31,7 @@ export function MainComp() {
 
         <div className={styles.gridCol}>
           <div className={styles.circleIconOne}>
-            <User className="w-4 h-4" />
+            <UserOne />
           </div>
           <p className={styles.pTag}>USERS</p>
           <h2 className={styles.hTag}>2,453</h2>
@@ -38,7 +39,7 @@ export function MainComp() {
 
         <div className={styles.gridCol}>
           <div className={styles.circleIconTwo}>
-            <CircleDollarSign className="w-4 h-4" />
+            <UserTwo />
           </div>
           <p className={styles.pTag}>ACTIVE USERS</p>
           <h2 className={styles.hTag}>2,453</h2>
@@ -46,7 +47,7 @@ export function MainComp() {
 
         <div className={styles.gridCol}>
           <div className={styles.circleIconThree}>
-            <CardSim className="w-4 h-4" />
+            <UserThree />
           </div>
           <p className={styles.pTag}>USERS WITH LOANS</p>
           <h2 className={styles.hTag}>12,453</h2>
@@ -54,14 +55,13 @@ export function MainComp() {
 
         <div className={styles.gridCol}>
           <div className={styles.circleIconFour}>
-            <Coins className="w-4 h-4" />
+            <UserFour />
           </div>
           <p className={styles.pTag}>USERS WITH SAVINGS</p>
           <h2 className={styles.hTag}>102,453</h2>
         </div>
       </div>
 
-      
 
       <div className="mt-5 overflow-x-auto">
         <table className={styles.tableWrapper}>
@@ -151,7 +151,7 @@ export function MainComp() {
       <div className={styles.lastPart}>
         <div className={styles.comps}>
           <p>showing</p>
-          <Button className="h-7">100</Button>
+          <Button variant='ghost' className="h-7 text-white bg-gray-700">100</Button>
           <p>out of 100</p>
         </div>
 

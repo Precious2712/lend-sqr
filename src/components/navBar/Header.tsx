@@ -7,6 +7,7 @@ import { useState } from "react";
 import { SideBar } from "../sideBarComp/SideBar";
 import styles from './navStyle/nav.module.scss';
 import { MainComp } from "../main/MainComp";
+import { HeaderLogo } from "../svgComp/AllSvgComp";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,7 @@ export function Header() {
       <div className={styles.header}>
         <div className={styles.headerInner}>
           <div onClick={hadleToggle} className={styles.logo}>
-            <img src="/lend-logo.PNG.png" alt="" />
+            <HeaderLogo />
           </div>
 
           <div className={styles.desktopSearch}>
@@ -102,7 +103,7 @@ export function Header() {
         {/* desktop */}
 
         <div className="hidden lg:flex w-full gap-1.5">
-          <div className="w-[250px]">
+          <div className="w-[250px] mt-[-15px]">
             <SideBar />
           </div>
 

@@ -1,9 +1,11 @@
 "use client"
 
-import type React from "react"
-import { useState } from "react"
-import Link from "next/link"
-import "../login/styles/login.scss"
+import type React from "react";
+import { useState } from "react";
+import Link from "next/link";
+import "../login/styles/login.scss";
+import { useRouter } from "next/navigation";
+import { HeaderLogo } from "@/components/svgComp/AllSvgComp";
 
 interface LoginFormData {
   email: string
@@ -15,10 +17,12 @@ export default function LoginPage() {
     email: "",
     password: "",
   })
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [message, setMessage] = useState("")
-  const [messageType, setMessageType] = useState<"success" | "error" | "">("")
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState<"success" | "error" | "">("");
+  const router = useRouter();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -28,35 +32,21 @@ export default function LoginPage() {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setMessage("")
-    setMessageType("")
-    console.log(formData);
-    
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setMessage("");
+    setMessageType("");
 
-    // try {
-    //   await new Promise((resolve) => setTimeout(resolve, 2000))
+    setTimeout(() => {
+      console.log(formData);
+      setMessage("Login successful!");
+      router.push('/dashboard');
+      setMessageType("success");
+      setIsLoading(false);
+    }, 2000);
+  };
 
-    //   if (!formData.email || !formData.password) {
-    //     throw new Error("Please fill in all fields")
-    //   }
-
-    //   if (!formData.email.includes("@")) {
-    //     throw new Error("Please enter a valid email address")
-    //   }
-
-    //   setMessage("Login successful!")
-    //   setMessageType("success")
-    //   setFormData({ email: "", password: "" })
-    // } catch (error) {
-    //   setMessage(error instanceof Error ? error.message : "Login failed")
-    //   setMessageType("error")
-    // } finally {
-    //   setIsLoading(false)
-    // }
-  }
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
@@ -66,7 +56,7 @@ export default function LoginPage() {
     <div className="login-page">
       <div className="header">
         <div className="logo-container">
-          <img src="/lend-logo.PNG.png" alt="" />
+          <HeaderLogo />
         </div>
       </div>
 
@@ -136,8 +126,6 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-
-      
     </div>
   )
 }
