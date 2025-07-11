@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Work_Sans } from "next/font/google";
+import { Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/components/useContext/Context";
 import { Toaster } from "react-hot-toast";

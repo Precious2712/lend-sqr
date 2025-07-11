@@ -2,10 +2,11 @@
 
 import {
     ChevronDown,
-    ShipWheel,
     LogOut
 } from "lucide-react";
+
 import styles from './sideNavCss/SideNavTwo.module.scss';
+
 import {
     AccountLogo,
     Audits,

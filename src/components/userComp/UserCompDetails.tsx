@@ -38,7 +38,7 @@ export function UserCompDetails() {
                     <div className={styles.divider}></div>
 
                     <div className={styles.tierSection}>
-                        <p className={styles.tierLabel}>User's Tier</p>
+                        <p className={styles.tierLabel}>User Tier</p>
                         <div className={styles.stars}>
                             <Star className={styles.filledStar} />
                             <Star className={styles.emptyStar} />
