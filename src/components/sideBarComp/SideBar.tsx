@@ -45,7 +45,7 @@ export function SideBar() {
 
             <div className={styles.sidebar__section}>
                 <h1 className={styles.sidebar__header}>CUSTOMERS</h1>
-                <div className={styles.sidebar__item}>
+                <div className={styles.sidebar__itemUser}>
                     <UserLogo />
                     <p className={styles.sidebar__text}>Users</p>
                 </div>

@@ -1,5 +1,8 @@
 .wrapper {
   margin-top: 3.5rem;
+  color: rgba(33, 63, 125, 1);
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .gridLayout {
@@ -17,12 +20,19 @@
   }
 }
 
+.tableBox {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
 .card {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
   background-color: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   padding: 1rem;
   width: 100%;
 }
@@ -69,14 +79,15 @@
 }
 
 .title {
-  font-size: 0.875rem;
-  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(84, 95, 125, 1);
 }
 
 .count {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(33, 63, 125);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: rgba(33, 63, 125, 1);
 }
 
 .icon {

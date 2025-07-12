@@ -211,7 +211,7 @@ export function FilterMainComp() {
           </div>
 
           {/* Table */}
-          <div className="flex-1 bg-white">
+          <div className={styles.tableBox}>
             <div className="overflow-x-auto scrollbar-hide" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
               <style jsx>{`
             .scrollbar-hide::-webkit-scrollbar {

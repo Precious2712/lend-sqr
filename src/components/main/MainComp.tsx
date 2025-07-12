@@ -1,6 +1,6 @@
 'use client';
 
-import { AlignCenter, ChevronLeft, ChevronRight, EllipsisVertical, Eye, UserCheck, UserX } from "lucide-react";
+import { AlignCenter, ChevronDown, ChevronLeft, ChevronRight, EllipsisVertical, Eye, UserCheck, UserX } from "lucide-react";
 import { Button } from "../ui/button";
 import { data } from "@/data/user/users";
 import styles from "./mainStyle/main.module.scss";
@@ -25,7 +25,7 @@ export function MainComp() {
 
   return (
     <div className={styles.container}>
-      <h1 className="mt-14">Users</h1>
+      <h1 className={styles.UserH1}>Users</h1>
 
       <div className={styles.gridContainer}>
 
@@ -63,7 +63,7 @@ export function MainComp() {
       </div>
 
 
-      <div className="mt-5 overflow-x-auto">
+      <div className={styles.containerItem}>
         <table className={styles.tableWrapper}>
           <thead>
             <tr className="border-b border-gray-200">
@@ -150,23 +150,26 @@ export function MainComp() {
 
       <div className={styles.lastPart}>
         <div className={styles.comps}>
-          <p>showing</p>
-          <Button variant='ghost' className="h-7 text-white bg-gray-700">100</Button>
-          <p>out of 100</p>
+          <p className={styles.showing}>showing</p>
+          <Button variant='ghost' className={styles.buttonTag}>
+            <p className={styles.figure}>100</p>
+            <ChevronDown />
+          </Button>
+          <p className={styles.showing}>out of 100</p>
         </div>
 
         <div className={styles.box}>
           <Button className={styles.svg}>
-            <ChevronLeft />
+            <ChevronLeft className={styles.icon} />
           </Button>
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
+          <p className={styles.numbers}>1</p>
+          <p className={styles.numbers}>2</p>
+          <p className={styles.numbers}>3</p>
           <span>...</span>
-          <p>15</p>
-          <p>16</p>
+          <p className={styles.digit}>15</p>
+          <p className={styles.digit}>16</p>
           <Button className={styles.svg}>
-            <ChevronRight />
+            <ChevronRight className={styles.icon} />
           </Button>
         </div>
       </div>

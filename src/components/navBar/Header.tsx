@@ -7,7 +7,8 @@ import { useState } from "react";
 import { SideBar } from "../sideBarComp/SideBar";
 import styles from './navStyle/nav.module.scss';
 import { MainComp } from "../main/MainComp";
-import { HeaderLogo } from "../svgComp/AllSvgComp";
+import { BellIcon, HeaderLogoOne } from "../svgComp/AllSvgComp";
+import Image from "next/image";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,7 @@ export function Header() {
       <div className={styles.header}>
         <div className={styles.headerInner}>
           <div onClick={hadleToggle} className={styles.logo}>
-            <HeaderLogo />
+            <HeaderLogoOne />
           </div>
 
           <div className={styles.desktopSearch}>
@@ -44,9 +45,15 @@ export function Header() {
             <Button variant="ghost" size="sm" className={styles.docsButton}>
               Docs
             </Button>
-            <Bell className={styles.bellIcon} />
+            <BellIcon />
             <div className={styles.profileGroup}>
-              <div className={styles.profileAvatar}></div>
+              <Image
+                className="rounded-full"
+                src={'/86d7f2b572489965cfe49416e536ab3ac00e669a.png'}
+                height={10}
+                width={25}
+                alt="/svg"
+              />
               <div className={styles.profileName}>
                 <span>Adedeji</span>
                 <ChevronDown className={styles.dropdownIcon} />
@@ -89,30 +96,30 @@ export function Header() {
       </div>
 
       <main className={styles.main}>
-        {/* mobile */}
+        {/* Mobile View */}
         <div className="block lg:hidden">
-          <div className={`${openSideNav ? 'block' : 'hidden'} absolute w-[95%] overflow-x-hidden z-40`}>
+          <div className={`${openSideNav ? 'block' : 'hidden'} fixed w-[95%] overflow-x-hidden z-40 h-[100vh]`}>
             <SideBar />
           </div>
 
-          <div>
+          <div className="w-[98%] m-auto">
             <MainComp />
           </div>
         </div>
 
-        {/* desktop */}
+        {/* Desktop View */}
 
-        <div className="hidden lg:flex w-full gap-1.5">
-          <div className="w-[250px] mt-[-15px]">
+        <div className="hidden lg:flex">
+          <div className={styles.sidebarWrapper}>
             <SideBar />
           </div>
 
-          <div className="flex-1 pr-7">
+          <div className="ml-[216px] w-[calc(100%-220px)] overflow-x-hidden">
             <MainComp />
           </div>
         </div>
-
       </main>
+
     </div>
   );
 }

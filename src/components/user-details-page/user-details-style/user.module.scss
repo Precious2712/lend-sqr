@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  height: 100%;
   background-color: rgb(251, 251, 251);
 }
 
@@ -7,7 +7,7 @@
   position: fixed;
   width: 100%;
   background-color: white;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 50;
@@ -19,7 +19,7 @@
 }
 
 .logo {
-  margin-left: 1px;
+  margin-left: 13px;
 }
 
 .desktopSearch {
@@ -87,11 +87,6 @@
 
   }
 }
-
-// .bellIcon {
-//   width: 1.25rem;
-//   height: 1.25rem;
-// }
 
 .docs {
   margin-left: 5px;
@@ -177,13 +172,31 @@
   flex-direction: column;
   gap: 0.625rem;
   margin-left: 6px;
-
-
 }
 
 .main {
   padding-top: 5rem;
 }
+
+.layoutWrapper {
+  display: flex; 
+  // min-height: 100vh;
+}
+
+.sidebarWrapper {
+  width: 260px;
+  background-color: white;
+  padding-top: 40px;
+  margin-top: -7px;
+}
+
+.contentWrapper {
+  flex: 1; // take up remaining space
+  overflow-x: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 
 @media(max-width: 640px) {
   .sideNav {

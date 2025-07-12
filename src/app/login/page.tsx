@@ -6,6 +6,7 @@ import Link from "next/link";
 import "../login/styles/login.scss";
 import { useRouter } from "next/navigation";
 import { HeaderLogo } from "@/components/svgComp/AllSvgComp";
+import Image from "next/image";
 
 interface LoginFormData {
   email: string
@@ -54,21 +55,23 @@ export default function LoginPage() {
 
   return (
     <div className="login-page">
-      <div className="header">
-        <div className="logo-container">
-          <HeaderLogo />
-        </div>
-      </div>
 
       <div className="main-content">
 
         <div className="illustration-section">
-          <div className="illustration-container">
-            <img
-              src="/d76431ad31054d654669dbf388b2a9ec503f6495.png"
-              alt="Login visual"
-              className="illustration-image"
-            />
+          <div>
+            <div className="logo-container">
+              <HeaderLogo />
+            </div>
+
+            <div>
+              <Image
+                src={'/d76431ad31054d654669dbf388b2a9ec503f6495.png'}
+                height={100}
+                width={430}
+                alt="Illustration"
+              />
+            </div>
           </div>
         </div>
 

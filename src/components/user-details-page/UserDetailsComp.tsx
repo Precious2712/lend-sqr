@@ -7,6 +7,8 @@ import { useState } from "react";
 import styles from './user-details-style/user.module.scss';
 import { SideNavTwo } from "../sideBarTwo/sideNavTwo";
 import { UserCompDetails } from "../userComp/UserCompDetails";
+import { HeaderLogoOne } from "../svgComp/AllSvgComp";
+import Image from "next/image";
 
 export function UserDetailsComp() {
   const [open, setOpen] = useState(false);
@@ -27,7 +29,7 @@ export function UserDetailsComp() {
       <div className={styles.header}>
         <div className={styles.headerInner}>
           <div onClick={hadleToggle} className={styles.logo}>
-            <img src="/lend-logo.PNG.png" alt="" />
+            <HeaderLogoOne />
           </div>
 
           <div className={styles.desktopSearch}>
@@ -45,7 +47,13 @@ export function UserDetailsComp() {
             </Button>
             <Bell className={styles.bellIcon} />
             <div className={styles.profileGroup}>
-              <div className={styles.profileAvatar}></div>
+              <Image
+                className="rounded-full"
+                src={'/86d7f2b572489965cfe49416e536ab3ac00e669a.png'}
+                height={10}
+                width={25}
+                alt="/svg"
+              />
               <div className={styles.profileName}>
                 <span>Adedeji</span>
                 <ChevronDown className={styles.dropdownIcon} />
@@ -88,7 +96,7 @@ export function UserDetailsComp() {
       <main className={styles.main}>
         {/* mobile */}
         <div className="block lg:hidden">
-          <div className={`${openSideNav ? 'block' : 'hidden'} absolute w-[95%] overflow-x-hidden z-40 top-14`}>
+          <div className={`${openSideNav ? 'block' : 'hidden'} absolute w-[95%] overflow-x-hidden z-40 top-20`}>
             <SideNavTwo />
           </div>
 
@@ -99,16 +107,17 @@ export function UserDetailsComp() {
 
         {/* desktop */}
 
-        <div className="hidden lg:flex w-full">
-          <div className="w-[250px]">
-            <SideNavTwo />
-          </div>
+        <div className="hidden lg:block">
+          <div className={styles.layoutWrapper}>
+            <div className={styles.sidebarWrapper}>
+              <SideNavTwo />
+            </div>
 
-          <div className="w-full lg:w-[78%]">
-            <UserCompDetails />
+            <div className={styles.contentWrapper}>
+              <UserCompDetails />
+            </div>
           </div>
         </div>
-
       </main>
     </div>
   );
