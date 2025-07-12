@@ -15,12 +15,10 @@ export function Header() {
   const [openSideNav, setOpenSideNav] = useState(false);
 
   function handleOpenNavBarOnMobile() {
-    alert();
     setOpen(!open);
   }
 
   function hadleToggle() {
-    alert();
     setOpenSideNav(!openSideNav)
   }
 

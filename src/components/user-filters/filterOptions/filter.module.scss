@@ -1,6 +1,7 @@
 .container {
-  min-height: 200vh;
+  min-height: 100vh;
   background-color: rgb(251, 251, 251);
+  padding-bottom: 80px;
 }
 
 .header {
@@ -72,9 +73,11 @@
 
 .docsButton {
   display: none;
+  text-decoration: dashed;
 
   @media (min-width: 768px) {
     display: flex;
+    text-decoration: dashed;
   }
 }
 
